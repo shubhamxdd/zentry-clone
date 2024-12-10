@@ -94,7 +94,7 @@ const Navbar = () => {
                 src="/audio/loop.mp3"
                 loop
               />
-              {[1, 2, 3, 4].map((bar, index) => (
+              {[1, 2, 3, 4].map((bar) => (
                 <div
                   key={bar}
                   className={`indicator-line ${

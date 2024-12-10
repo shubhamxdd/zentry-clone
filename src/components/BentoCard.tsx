@@ -57,9 +57,7 @@ export const BentoTilt = ({
     setTransformStyle(newTransform);
   };
 
-  const handleMouseLeave = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
+  const handleMouseLeave = () => {
     setTransformStyle("");
   };
 

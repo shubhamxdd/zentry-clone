@@ -7,7 +7,7 @@ interface AnimatedTitleProps {
   sectionId?: string
 }
 
-const AnimatedTitle = ({ title, containerClass,sectionId }: AnimatedTitleProps) => {
+const AnimatedTitle = ({ title, containerClass }: AnimatedTitleProps) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
