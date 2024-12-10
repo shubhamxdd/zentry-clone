@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
   const [hasClicked, setHasClicked] = useState(false);
-  // const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
 
   const totalVideos = 4;
@@ -20,8 +20,8 @@ const Hero = () => {
   const nextVideoIndex = (currentIndex % totalVideos) + 1;
 
   useEffect(() => {
-    if (loadedVideos === totalVideos) {
-      // setIsLoading(false);
+    if (loadedVideos === totalVideos - 1) {
+      setIsLoading(false);
     }
   }, [loadedVideos]);
 
@@ -86,7 +86,7 @@ const Hero = () => {
   return (
     <div className="relative h-dvh w-screen overflow-x-hidden">
       {/* TODO FIX LOADER */}
-      {/* {isLoading && (
+      {isLoading && (
         <div className="loader flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
           <div className="three-body">
             <div className="three-body__dot" />
@@ -95,7 +95,7 @@ const Hero = () => {
             <div className="three-body__dot" />
           </div>
         </div>
-      )} */}
+      )}
       <div
         id="video-frame"
         className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75"
