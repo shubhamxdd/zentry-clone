@@ -4,9 +4,10 @@ import { useEffect, useRef } from "react";
 interface AnimatedTitleProps {
   title: string;
   containerClass: string;
+  sectionId?: string
 }
 
-const AnimatedTitle = ({ title, containerClass }: AnimatedTitleProps) => {
+const AnimatedTitle = ({ title, containerClass,sectionId }: AnimatedTitleProps) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
